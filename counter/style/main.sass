@@ -9,10 +9,15 @@ body
   width: 7.5em
   height: 7.5em
   background: rgba(0, 0, 0, 0.8)
-  position: absolute
-  transform: translate(-50%, -50%)
-  top: 50%
-  left: 50%
+  &:nth-child(1)
+    position: absolute
+    transform: translate(-50%, -50%)
+    top: 50%
+    left: 50%
+  &:nth-child(2)
+    position: absolute
+    left: 0
+      top: 0
   .counter
     margin: 0
     padding: 0

@@ -1,1 +1,1 @@
-body{min-height:100vh;min-width:100vw;overflow:hidden}#circle{background:lightblue;width:1em;height:1em;border-radius:50%}
+body{min-height:100vh;min-width:100vw;overflow:hidden}.circle{background:lightblue;width:1em;height:1em;border-radius:50%;transition:transform 300ms}

@@ -15,7 +15,6 @@ document.body.addEventListener("mousemove", (e) => {
     x = e.clientX - circle.clientWidth;
     y = e.clientY - circle.clientHeight;
     pos.push({x: x, y: y, time: Date.now()-diffDate, size: lastSize});
-    y -= circle.clientHeight;
     preview.style.transform = "translate("+x+"px, "+y+"px) scale("+lastSize+", "+lastSize+")";
   }
 });

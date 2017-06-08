@@ -3,24 +3,45 @@
   <head>
     <meta charset="utf-8">
     <title>js-calculator</title>
+    <link rel="stylesheet" href="style/style.css">
   </head>
   <body>
     <main>
-      numbers:
+      <label for="">numbers:</label>
       <input type="text" name="numbers" value=""><br>
-      operation:
+      <label for="">operation:</label>
       <select name="operation">
         <option value="add">+</option>
         <option value="subtract">-</option>
         <option value="multiply">*</option>
         <option value="devide">/</option>
-      </select>
-      <div class="result">
-        Result: -
+      </select><br>
+      <button type="button" name="button">calculate</button>
+      <div class="resultWrapper">
+        Result:
+        <p class="result">
+          -
+        </p>
       </div>
-      <div class="examples">
-        
-      </div>
+      <pre class="examples">
+        <h1>Test Examples</h1>
+        Numbers:    30, 2, 5
+        Operation:  +
+        Result:     37        ( = 30 + 2 + 5 )
+
+        Numbers:    30, 2, 5
+        Operation:  -
+        Result:     23        ( = 30 - 2 - 5 )
+
+        Numbers:    30, 2, 5
+        Operation:  *
+        Result:     300       ( = 30 * 2 * 5 )
+
+        Numbers:    30, 2, 5
+        Operation:  /
+        Result:     3         ( = 30 / 2 / 5 )
+
+      </pre>
     </main>
   </body>
 </html>

@@ -1,0 +1,17 @@
+.resultWrapper {
+  background: black;
+  color: white;
+  padding: 1em
+}
+p {
+  display: inline-block;
+}
+
+input, select, button {
+  margin: 1em 0em;
+}
+
+label {
+  width: 9em;
+  display: inline-block;
+}

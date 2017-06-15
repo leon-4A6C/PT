@@ -1,5 +1,6 @@
 function firstCharacterUpper(str) {
   str = str.toLowerCase();
+  str = str.trim().replace(/\s{2,}/g, ' ');
   var words = str.split(" ");
   var characters = [];
   var res = "";

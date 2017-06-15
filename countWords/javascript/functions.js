@@ -1,10 +1,16 @@
 function firstCharacterUpper(str) {
   str = str.toLowerCase();
-  str = str.split("");
-  str[0] = str[0].toUpperCase();
+  var words = str.split(" ");
+  var characters = [];
   var res = "";
-  for (var i = 0; i < str.length; i++) {
-    res += str[i];
+  for (var i = 0; i < words.length; i++) {
+    characters.push(words[i].split(""));
+    characters[i][0] = characters[i][0].toUpperCase();
+    words[i] = "";
+    for (var j = 0; j < characters[i].length; j++) {
+      words[i] += characters[i][j];
+    }
+    res += words[i] + " ";
   }
   return res
 }

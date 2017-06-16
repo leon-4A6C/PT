@@ -11,12 +11,27 @@ document.getElementsByName("text")[0].addEventListener("keyup", e => {
       maxWord.word = words[i];
     }
   }
+  var freq = {};
+  for (var i = 0; i < words.length; i++) {
+    if (freq[words[i]]) {
+      freq[words[i]]++;
+    } else {
+      freq[words[i]] = 1;
+    }
+  }
+  var maxFreq = {freq: 0, word: ""};
+  for (var word in freq) {
+    if (freq.hasOwnProperty(word) && freq[word] > maxFreq.freq) {
+      maxFreq = {freq: freq[word], word: word};
+    }
+  }
   if (words[0] === "" && words.length === 1) {
     words = [];
   }
   var wordCount = words.length;
   var characterCount = text.length;
   output.innerHTML = text + "<br>Word count: " + wordCount + "<br>character count: " + characterCount + "<br>langste word lengte: " + maxWord.length + "<br>langste word: " + maxWord.word;
+  output.innerHTML += "<br>most  frequent word: " + maxFreq.word + "<br>frequenty: " + maxFreq.freq;
 });
 
 document.getElementsByName("button")[0].addEventListener("click", e => {

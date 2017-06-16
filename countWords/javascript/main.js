@@ -4,6 +4,9 @@ document.getElementsByName("text")[0].addEventListener("keyup", e => {
   var text = e.target.value;
   text = text.trim().replace(/\s{2,}/g, ' ');
   var words = text.split(" ");
+  if (words[0] === "" && words.length === 1) {
+    words = [];
+  }
   var maxWord = {length: 0, word: ""};
   for (var i = 0; i < words.length; i++) {
     if (words[i].length > maxWord.length) {
@@ -24,9 +27,6 @@ document.getElementsByName("text")[0].addEventListener("keyup", e => {
     if (freq.hasOwnProperty(word) && freq[word] > maxFreq.freq) {
       maxFreq = {freq: freq[word], word: word};
     }
-  }
-  if (words[0] === "" && words.length === 1) {
-    words = [];
   }
   var wordCount = words.length;
   var characterCount = text.length;
